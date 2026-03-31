@@ -1,0 +1,18 @@
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        const set = new Set();
+
+        for(const value of nums){
+            if(set.has(value)){
+                return true;
+            }else{
+                set.add(value);
+            }
+        }
+        return false;
+    }
+}
